@@ -101,6 +101,18 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
 ![openlane_flow](./img/openlane_flow.png)
      - OpenLane Link : https://github.com/efabless/openlane 
 
+
+     - Lab1. How to Synthesis?
+       - in openlane position
+       - make your design folder in design folder
+          - ex) /home/(user_name)/Desktop/work/tools/openlane_working_dir/openlane/designs/(your_prj_folder)
+       - ./flow.tcl -interactive
+          ```openlean
+          package require openlane 0.9
+          prep -design (your_prj_folder) -tag (result_folder_name)
+          run_synthesis
+          ```
+
 ### Day2. Understand importance of good floorplan vs bad floorplan and introduction to library cells
 
    - chip Floor planning considerations
