@@ -106,7 +106,11 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
        - go to openlane position (ex. (my_path)/work/tools/openlane_working_dir/openlane/)
        - make your design folder in design folder
           - ex) (my_path)/work/tools/openlane_working_dir/openlane/designs/(your_prj_folder)
-       - ./flow.tcl -interactive
+       - run docker
+	   	 ```
+		 docker run -it -v $(pwd):/openLANE_flow -v $PDK_ROOT:$PDK_ROOT -e PDK_ROOT=$PDK_ROOT -u $(id -u $USER):$(id -g $USER) openlane:rc6
+		 ```
+	   - ./flow.tcl -interactive
           ```openlean
           package require openlane 0.9
           prep -design (your_prj_folder) -tag (result_folder_name)
