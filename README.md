@@ -22,6 +22,8 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
 
 ## Content
 
+---
+
 ### Day1. Inception of open-source EDA, OpenLANE and Sky130 PDK
 
    - How to talk to computer?
@@ -64,23 +66,40 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
    - Simplified RTL to GDSII Flow
 ![](./img/1-2-1.png)
 
-      - Synth = Synthesis : Convert RTL to circuit based on Standard Cell Library(SCL)
+      - **Synth** = Synthesis : Convert RTL to circuit based on Standard Cell Library(SCL)
         - **Standard Cell** have regular layout. **Same height, diff width**
-      - FP+PP = Floor Planning & Power Planning : 
-        - Floor planninh : Partition the chip die between different system building blocks and place the I/O Pads
-        - Power Planning : Setting multiple VDD and GND
-      - Place : Place the cells on the floorplan rows, aligned with the sites. it have two step. Global and Detailed
-      - CTS = Clock Tree Synthesis : Create a clock distribution Network
+      - **FP+PP = Floor Planning & Power Planning** : 
+        - **Floor planning** : Partition the chip die between different system building blocks and place the I/O Pads
+        - **Power Planning** : Setting multiple VDD and GND
+      - **Place** : Place the cells on the floorplan rows, aligned with the sites. it have two step. Global and Detailed
+      - **CTS = Clock Tree Synthesis** : Create a clock distribution Network
         - To deliver the clock to all sequential elements(ex. FF)
         - with minimum skew (zero is hard to achieve)
         - Usually a Tree (H, X, ...) 
+      - **Route** : Implement the interconnect using the available metal layers
+        - Metal tracks from a routing grid
+        - Routing grid i huge
+        - Divide and Conquer
+          - Global Routing : Generated routing guides
+          - Deailed Routing : Uses the routing guides to implement the actual wiring
+      - **Sign off**
+        - Physical Verification
+          - Design Rules Checking(DRC)
+          - Layout vs. Schematic(LVS)
+        - Timing Verification
+          - Static Timing Analysis(STA)
 
 
-
-   - Starting RISC-V SoC Reference design
-     - 
-   - Get familiar to open-source EDA tools
-     - 
+   - OpenLANE
+     - OpenSource ASIC design Flow
+     - Main Goal : Produce a clean GDSII with no human intervention(no-human-in-the-loop)
+     - Clean means
+       - No LVS Violations
+       - No DRC Violations
+       - Timing Violations? Work In Progress!
+     - OpenLane Flow
+![openlane_flow](./img/openlane_flow.png)
+     - OpenLane Link : https://github.com/efabless/openlane 
 
 ### Day2. Understand importance of good floorplan vs bad floorplan and introduction to library cells
 
