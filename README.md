@@ -103,9 +103,9 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
 
 
      - Lab1. How to Synthesis?
-       - in openlane position
+       - go to openlane position (ex. (my_path)/work/tools/openlane_working_dir/openlane/)
        - make your design folder in design folder
-          - ex) /home/(user_name)/Desktop/work/tools/openlane_working_dir/openlane/designs/(your_prj_folder)
+          - ex) (my_path)/work/tools/openlane_working_dir/openlane/designs/(your_prj_folder)
        - ./flow.tcl -interactive
           ```openlean
           package require openlane 0.9
