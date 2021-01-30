@@ -167,6 +167,28 @@ run_floorplan
    ```
   
    - Cell design and characterization flows
+     - Standard Cells library can have Different functionality and Different size,Different Vt
+     - Cell Design Flow
+       - Input
+         - PDKs
+         - DRC & LVS rules 
+         - SPICE models parameter
+         - library & user-defined specs
+           - Cell-height
+           - supply voltage
+           - Metal layers
+           - Pin location
+           - Drawn gate-length
+       - Design Steps
+         - Circuit design
+         - layout design
+         - characterization -> (Outputs : Timing, noise, power .libs, function)
+       - Outputs
+         - CDL(Circuit Description Language)
+         - GDSII
+         - LEF
+         - extracted spice netlist(.cir)
+         - Timing, noise, power .libs, function
    - General timing Characterization parameters
 
 ### Day3. Design and characterize on library cell using Magic Layout tool and ngspice
