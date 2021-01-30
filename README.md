@@ -189,6 +189,7 @@ run_floorplan
          - LEF
          - extracted spice netlist(.cir)
          - Timing, noise, power .libs, function
+  
    - General timing Characterization parameters
 
 ### Day3. Design and characterize on library cell using Magic Layout tool and ngspice
