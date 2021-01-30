@@ -191,6 +191,9 @@ run_floorplan
          - Timing, noise, power .libs, function
   
    - General timing Characterization parameters
+![](img/2-7.png)
+![](img/2-8.png)
+![](img/2-9.png)
 
 ### Day3. Design and characterize on library cell using Magic Layout tool and ngspice
 
