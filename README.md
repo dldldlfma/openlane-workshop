@@ -119,7 +119,26 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
 
 ### Day2. Understand importance of good floorplan vs bad floorplan and introduction to library cells
 
-   - chip Floor planning considerations
+   - Chip Floor planning considerations
+     - **Core** is Section of the chip where the fundamental logic of the design in placed
+     - A **'die'**, which consists of core, is small semiconductor material specimen on which the funcdamental circuit is fabricated.
+     - Utilization Factor = (Area Occupied by Netlist) / (Total Area of the Core)
+     - Aspect Ratio = (Height / Width)
+     - Preplaced Cells : Placing important object(ALU, Memory, Clock gating cell) first in user-defined locations is called a preplaced cells
+     
+
+#### **De-coupling capacitors**
+
+  - Using Decoupling Capacitor, the logic is put into a power stable state.
+![Decoupling Capacitors](./img/2-1.jpg)
+
+#### **Power planning**
+
+  - Ground bumps and voltage drops occur when all nodes use the same power source. 
+  - So we need a power planning (using multiple power sources and multiple grounds).
+
+![Power Planning](./img/2-2.jpg)
+
    - Library Binding and Placement
    - Cell design and characterization flows
    - General timing Characterization parameters
