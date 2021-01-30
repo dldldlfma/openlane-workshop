@@ -139,7 +139,33 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
 
 ![Power Planning](./img/2-2.jpg)
 
+```tcl
+set env(SOME_VARIABLE) VALUE #change SOME_VARIABLE's value 
+```
+
+Before the floorplan, you can change option value in configfile which is place in **/path_to_openlane/configuration/FILE_NAME**
+
+```tcl
+#in openlane, after run_synthesis
+run_floorplan
+```
+
    - Library Binding and Placement
+     - in this step, library is "Set of physical cells with cells's infomation"
+     - placement is "placing the cells"
+![placement](img/2-3.jpg)
+![placement](img/2-4.png)
+![placement](img/2-5.png)
+
+     - Logic Synthesis -> Floor Planning -> Placement -> CTS -> Routing -> STA(Static Timing Analysis)
+     - in all stage need "GATES or Cells"'s infomation
+     - How do we deisgn, characterize or model these cells? (next step)
+   
+   ```tcl
+   #in openlane, after run_floorplan
+   run_placement
+   ```
+  
    - Cell design and characterization flows
    - General timing Characterization parameters
 
