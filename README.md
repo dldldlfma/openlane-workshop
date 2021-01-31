@@ -24,6 +24,21 @@ Install need a lot of time. So if you don't follow the direction, you will be lo
 
 ---
 
+### Openlane command
+0. package require openlane 0.9
+1. prep -design <design> -tag <tag> -config <config> -init_design_config -overwrite
+2. run_synthesis
+3. run_floorplan
+4. run_placement
+5. run_cts
+6. gen_pdn
+7. run_routing
+8. run_magic
+9. run_magic_spice_export
+10. run_magic_drc
+11. run_lvs
+12. run_magic_antenna_check
+
 ### Day1. Inception of open-source EDA, OpenLANE and Sky130 PDK
 
    - How to talk to computer?
